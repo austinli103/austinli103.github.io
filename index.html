@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clash Royale Imposter Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SETUP SCREEN -->
+    <div id="setupScreen" class="screen active">
+        <h1>Clash Royale Imposter</h1>
+        <p>Select number of players:</p>
+
+        <select id="playerCount">
+            <option value="3">3 Players</option>
+            <option value="4">4 Players</option>
+            <option value="5">5 Players</option>
+            <option value="6">6 Players</option>
+            <option value="7">7 Players</option>
+            <option value="8">8 Players</option>
+            <option value="9">9 Players</option>
+            <option value="10">10 Players</option>
+        </select>
+
+        <br><br>
+        <button id="startBtn">Start Game</button>
+
+        <p>
+            How to play: 
+        </p>
+        <p>
+            Everyone has the same card but one person (the imposter). 
+            Player 1 starts by giving a hint to describe their card (don't make it too obvious!). 
+            Players will each give their hints chronologically, then discuss to find the imposter. 
+            Change who player 1 is for each new round.
+        </p>
+    </div>
+
+    <!-- PASS AROUND SCREEN -->
+    <div id="passScreen" class="screen">
+        <h1 id="playerTitle">Player 1</h1>
+
+        <div id="hiddenCard">
+            <p>Tap to reveal your card</p>
+            <button id="revealBtn">Reveal Card</button>
+        </div>
+
+        <div id="revealedCard">
+            <div class="card" id="cardText"></div>
+            <button id="hideBtn">Hide & Pass</button>
+        <p> Make sure no one else sees!</p>
+        </div>
+    </div>
+
+    <!-- END SCREEN-->
+    <div id="endScreen" class="screen">
+        <h1>All players have seen their cards!</h1>
+        <p>Discuss and find the imposter 👀</p>
+        <button id = 'againBtn'>Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
